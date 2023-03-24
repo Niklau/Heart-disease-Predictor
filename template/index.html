@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Heart Disease Percent</title>
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1 style="color:Violet;">Heart disease prediction</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="age" placeholder="age" required="required" /><p>
+        <input type="text" name="sex" placeholder="sex" required="required" /><p>
+          <input type="text" name="cp" placeholder="cp" required="required" /><p>
+            <input type="text" name="chol" placeholder="chol" required="required" /><p>
+              <input type="text" name="thalach" placeholder="thalach" required="required" /><p>
+                <input type="text" name="exang" placeholder="exang" required="required" /><p>
+                  <input type="text" name="oldpeak" placeholder="oldpeak" required="required" /><p>
+                    <input type="text" name="slope" placeholder="slope" required="required" /><p>
+                      <input type="text" name="ca" placeholder="ca" required="required" /><p>
+                        <input type="text" name="thal" placeholder="thal" required="required" /><p>
+                        </p>
+                      </p>
+                    </p>
+                  </p>
+                </p>
+              </p>
+            </p>
+          </p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict if a patient has heart disease</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
